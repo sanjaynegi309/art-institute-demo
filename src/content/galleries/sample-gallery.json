@@ -2,5 +2,24 @@
   "title": "Sample Gallery",
   "description": "This is a placeholder description for the sample gallery.",
   "slug": "sample-gallery",
-  "images": []
+  "images": [
+    {
+      "filename": "image1.webp",
+      "alt": "Sample Image 1",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "filename": "image2.webp",
+      "alt": "Sample Image 2",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "filename": "image3.webp",
+      "alt": "Sample Image 3",
+      "width": 800,
+      "height": 600
+    }
+  ]
 }

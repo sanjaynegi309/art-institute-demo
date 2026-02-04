@@ -1,12 +1,21 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import fs from "node:fs/promises";
 import path from "node:path";
+
+interface GalleryImage {
+  filename: string;
+  alt: string;
+  width: number;
+  height: number;
+}
 
 interface GalleryData {
   title: string;
   description: string;
   slug: string;
+  images: GalleryImage[];
 }
 
 const GALLERIES_PATH = path.join(process.cwd(), "src/content/galleries");
@@ -66,10 +75,31 @@ export default async function GalleryPage({
     notFound();
   }
 
+  // Limit to max 12 images
+  const imagesToShow = gallery.images.slice(0, 12);
+
   return (
     <main>
       <h1>{gallery.title}</h1>
       <p>{gallery.description}</p>
+      <div className="gallery-grid">
+        {imagesToShow.map((image) => (
+          <div key={image.filename} className="gallery-item">
+            <Image
+              src={`/images/galleries/${slug}/${image.filename}`}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
