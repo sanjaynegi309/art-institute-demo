@@ -13,3 +13,9 @@ To ensure optimal image performance and follow project standards, adhere to the 
 - **App Router**: Use the App Router (`app/` directory) for all routes. The `pages/` directory is not used.
 - **TypeScript**: All code must be written in TypeScript with strict type checking.
 - **Minimalist Defaults**: Avoid unnecessary dependencies like Tailwind, animations, or mock data unless explicitly requested.
+
+## Gallery Management
+- **Routes**: Galleries are located at `/galleries/[slug]`.
+- **Metadata**: Gallery data is stored as JSON files in `src/content/galleries/`.
+- **Images**: Future gallery images should be placed in `public/images/galleries/[slug]/`.
+- **Static Generation**: Galleries use `generateStaticParams` for full static site generation.
