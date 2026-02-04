@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: serif; /* Classic art institute feel */
+  line-height: 1.6;
+  color: #333;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.teaser-section {
+  margin-bottom: 4rem;
+}
+
+.teaser-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.teaser-item {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+.teaser-item:hover {
+  border-color: #000;
+}
+
+.gallery-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.text-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+}
+
+.text-link:hover {
+  border-bottom-color: #000;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+}

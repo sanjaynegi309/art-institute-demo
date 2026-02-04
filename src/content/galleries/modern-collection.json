@@ -1,0 +1,19 @@
+{
+  "title": "Modern Collection",
+  "description": "A curated selection of modern masterpieces from the 20th and 21st centuries.",
+  "slug": "modern-collection",
+  "images": [
+    {
+      "filename": "modern1.webp",
+      "alt": "Modern Artwork 1",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "filename": "modern2.webp",
+      "alt": "Modern Artwork 2",
+      "width": 800,
+      "height": 600
+    }
+  ]
+}
